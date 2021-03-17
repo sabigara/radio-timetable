@@ -1,0 +1,26 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#container {
+  table-layout: fixed;
+  width: 100%;
+}
+
+#container thead {
+  /* Hide table headers for each pages when printed */
+  break-inside: unset;
+}
+
+#contents td {
+  vertical-align: top;
+  padding: 8px;
+  background: #eee;
+  border-radius: 5px;
+} 
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
