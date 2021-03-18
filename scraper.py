@@ -88,9 +88,13 @@ def radiko():
     return programs
 
 
-if __name__ == "__main__":
+def scrape():
     all = nhk() + radiko()
     with open(
         os.path.join("server", "data", now.date().isoformat() + ".json"), "w"
     ) as f:
         f.write(json.dumps([prog.to_dict() for prog in all], default=str))
+
+
+if __name__ == "__main__":
+    scrape()

@@ -10,9 +10,10 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
 
 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("Serving at port", PORT)
-    try:
-        httpd.serve_forever()
-    except KeyboardInterrupt:
-        print("Keyboard interrupt.")
+def serve():
+    with socketserver.TCPServer(("", PORT), Handler) as httpd:
+        print("Serving at port", PORT)
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            print("Keyboard interrupt.")

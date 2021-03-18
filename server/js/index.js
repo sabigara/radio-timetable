@@ -99,7 +99,7 @@ function fillData(data) {
         insertProgramCell(
           offsetMin,
           diffMin,
-          programCell("Sleep", prevProgEndTime, startAt)
+          programCell("番組休止中", prevProgEndTime, startAt)
         );
       }
       prevProgEndTime = endAt;
@@ -111,7 +111,7 @@ function fillData(data) {
       insertProgramCell(
         offsetMin,
         diffMin,
-        programCell("Sleep", prevProgEndTime, tomorrow)
+        programCell("番組休止中", prevProgEndTime, tomorrow)
       );
     }
   });
